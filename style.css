@@ -89,6 +89,8 @@
   padding: 0;
 }
 body {
+
+  overflow-y: scroll;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -104,13 +106,13 @@ body {
   position: relative;
   z-index: 1010;
   display: flex;
-  height: 5.8rem;
+  height: 5.2rem;
   margin-top: 16px;
   width: 100%;
 }
 .container {
   display: flex;
-
+margin-top: 10px;
   position: absolute;
 }
 .ud-img {
@@ -121,6 +123,7 @@ body {
 }
 
 .nav-categories {
+  
   background-color: transparent;
   min-width: auto;
   border: none;
@@ -133,7 +136,7 @@ body {
   display: inline-flex;
   max-width: 100%;
   min-width: 8rem;
-  margin-left: 20px;
+  margin-left: 5px;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: bottom;
@@ -141,9 +144,9 @@ body {
 }
 .btntext {
   font-family: var(--font-stack-text);
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1rem;
 }
 button,
 .btntext {
@@ -162,14 +165,14 @@ button,
 }
 .hove-section-active {
   z-index: 1000;
- 
+ position: absolute;
   justify-content: space-between;
   display: flex;
   border-style: solid 5px grey;
 
-  height: 600px;
-  width: 1135px;
-  margin-top: 30px;
+  height: 400px;
+  width: 935px;
+  margin-top: 130px;
   margin-left: 160px;
 background-color: white;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
@@ -178,9 +181,9 @@ background-color: white;
 }
 .sectionone a {
   font-family: var(--font-stack-text);
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 1.2;
+  font-size: 1rem;
   color: black;
   text-decoration: none;
 }
@@ -213,9 +216,9 @@ background-color: white;
 }
 .sectiontwo a {
   font-family: var(--font-stack-text);
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 1.2;
+  font-size: 1rem;
   color: black;
   text-decoration: none;
 }
@@ -232,9 +235,9 @@ background-color: white;
 }
 .sectionthree a {
   font-family: var(--font-stack-text);
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 1.2;
+  font-size: 1rem;
   color: black;
   text-decoration: none;
 }
@@ -246,19 +249,21 @@ background-color: white;
   list-style-type: none;
 }
 .search {
+  position: relative;
   background-color: #fff;
-  margin-top: -8px;
-  margin-left: 350px;
+  margin-top: 12px;
+  margin-left: 200px;
 }
 
 .search .input {
+  position: relative;
   padding-left: 80px;
   margin-left: 100px;
-  margin-top: 2px;
+  margin-top: 5px;
   font-size: 18px;
-  min-width: 18rem;
-  height: 4.8rem;
-  width: 1100px;
+ 
+  height: 3.4rem;
+  width: 1000px;
   background-color: #f7f9fa;
   margin: 0 1.2rem;
   align-items: center;
@@ -274,23 +279,41 @@ background-color: white;
 
 .search .fas {
   cursor: not-allowed;
-
-  display: block;
-
+position: absolute;
+  display: flex;
+margin-left: 30px;
   fill: currentColor;
+margin-top: -55px;
+  
 
-  margin-top: -1000px;
-  margin-left: -2200px;
 }
 .udbusiness {
-  display: flex;
-  margin-top: -20px;
-  margin-left: 50px;
+
+  position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    max-width: 100%;
+    min-width: 8rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+
+  margin-top: -33px;
+  margin-left: 2px;
 }
 .udbusiness a {
   text-decoration: none;
 }
 .udbusiness .btntext {
+  font-family: var(--font-stack-text);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1rem;
   cursor: pointer;
   color: black;
   margin-top: 40px;
@@ -301,9 +324,22 @@ background-color: white;
 }
 
 .udteach {
-  display: flex;
-  margin-top: -20px;
-  margin-left: 30px;
+  position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    max-width: 100%;
+    min-width: 8rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+
+    margin-top: -33px;
+  margin-left: 4px;
 }
 .udteach a {
   text-decoration: none;
@@ -319,9 +355,22 @@ background-color: white;
 
 .udlearning {
   position: relative;
-  display: flex;
-  margin-top: -20px;
-  margin-left: 30px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    max-width: 100%;
+    min-width: 8rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+  position: relative;
+  
+  margin-top: -33px;
+  margin-left: 2px;
 }
 .udlearning a {
   text-decoration: none;
@@ -338,10 +387,10 @@ background-color: white;
 
 .udwishlist img {
   display: flex;
-  margin-top: 20px;
-  margin-left: 30px;
-  width: 38px;
-  height: 38px;
+  margin-top: 30px;
+  margin-left: 2px;
+  width: 28px;
+  height: 26px;
 }
 .udwishlist a {
   cursor: pointer;
@@ -355,10 +404,10 @@ background-color: white;
 
 .udcartlist img {
   display: flex;
-  margin-top: 20px;
-  margin-left: 42px;
-  width: 38px;
-  height: 38px;
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 28px;
+  height: 26px;
 }
 .udcartlist a {
   cursor: pointer;
@@ -367,10 +416,10 @@ background-color: white;
 
 .udbellicon img {
   display: flex;
-  margin-top: 20px;
-  margin-left: 40px;
-  width: 38px;
-  height: 38px;
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 28px;
+  height: 26px;
 }
 .udbell a {
   cursor: pointer;
@@ -378,7 +427,7 @@ background-color: white;
 }
 .name-AS {
   color: white;
-  margin-left: 50px;
+  margin-left: 15px;
   margin-top: 20px;
   border: solid 1px black;
   background-color: #101112;
@@ -401,17 +450,17 @@ background-color: white;
   position: relative;
 }
 .toggle-Udbusiness-active {
-  position: relative;
+  position: absolute;
   border-style: solid 5px grey;
   z-index: 1000;
 display: block;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   padding: 50px;
-  width: 455px;
-  height: 300px;
-  margin-top: 20px;
-  margin-left: 1300px;
+  width: 325px;
+  height: 180px;
+  margin-top: 110px;
+  margin-left: 1000px;
 }
 
 .toggle-Udbusiness h2 {
@@ -419,11 +468,11 @@ display: block;
 
   font-family: var(--font-stack-heading);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: 0;
-  font-size: 1.8rem;
-  max-width: 36em;
-  align-items: center;
+  font-size: 1.3rem;
+ 
+  
   justify-content: center;
 }
 
@@ -437,9 +486,9 @@ display: block;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   max-width: 30em;
-  margin-top: 50px;
+  margin-top: 20px;
   height: 2em;
   border: solid 1px black;
   background-color: rgb(45, 47, 49);
@@ -449,17 +498,19 @@ display: block;
   position: relative;
 }
 .toggle-Udteach-active {
-  position: relative;
+  position: absolute;
   border-style: solid 5px grey;
   z-index: 1000;
   display: block;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   padding: 50px;
-  width: 455px;
-  height: 300px;
-  margin-top: 25px;
-  margin-left: 1500px;
+  width: 355px;
+  height: 180px;
+  margin-top: 110px;
+  margin-left: 1200px;
+  background-color: white
+  ;
 }
 
 .toggle-Udteach h2 {
@@ -469,10 +520,8 @@ display: block;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.8rem;
-  max-width: 36em;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.3rem;
+
 }
 
 .toggle-Udteach h3 {
@@ -485,9 +534,9 @@ display: block;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   max-width: 30em;
-  margin-top: 45px;
+  margin-top: 25px;
   height: 2em;
   border: solid 1px black;
   background-color: rgb(45, 47, 49);
@@ -498,16 +547,17 @@ display: block;
   
 }
 .toggle-Udlearning-active{
+  position: absolute;
   z-index: 1000;
   display: block;
-  margin-top: 25px;
-  margin-left: 1700px;
+  margin-top: 115px;
+  margin-left: 1300px;
   background-color: white;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   padding: 50px;
-  width: 465px;
-  height: 500px;
+  width: 365px;
+  height: 350px;
 }
 
 .toggle-Udlearning h2 {
@@ -517,25 +567,24 @@ display: block;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
 
-  align-items: center;
-  justify-content: center;
+  margin-left: 80px;
 }
 
 .udlearningimg1 {
   position: absolute;
   vertical-align: middle;
-  width: 120px;
-  height: 115px;
+  width: 80px;
+  height: 75px;
   margin-left: -20px;
 }
 
 .udlearningimg2 {
   position: absolute;
   vertical-align: middle;
-  width: 120px;
-  height: 115px;
+  width: 80px;
+  height: 75px;
   margin-left: -10px;
 }
 .udlearningh2one {
@@ -558,33 +607,33 @@ display: block;
 
 .colorbar1 {
   border: solid 1px lightgrey;
-  margin-left: 120px;
-  margin-top: 20px;
+  margin-left: 80px;
+  margin-top: 10px;
   height: 15px;
-  width: 270px;
+  width: 200px;
   background-color: lightgray;
 }
 
 .colorbar2 {
   border: solid 1px lightgrey;
-  margin-left: 130px;
-  margin-top: 20px;
+  margin-left: 80px;
+  margin-top: 10px;
   height: 15px;
-  width: 285px;
+  width: 200px;
   background-color: lightgray;
 }
 .planeline1 {
   border: solid 0.5px lightgrey;
   margin-left: -48px;
-  margin-top: 50px;
-  width: 462px;
+  margin-top: 10px;
+  width: 360px;
 }
 
 .planeline2 {
   border: solid 0.5px lightgrey;
   margin-left: -40px;
-  margin-top: 50px;
-  width: 470px;
+  margin-top: 20px;
+  width: 360px;
 }
 
 .toggle-Udlearning h3 {
@@ -597,9 +646,9 @@ display: block;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   max-width: 30em;
-  margin-top: 45px;
+  margin-top: 35px;
   height: 2em;
   border: solid 1px black;
   background-color: rgb(45, 47, 49);
@@ -619,28 +668,29 @@ display: block;
   display: none;
 }
 .toggle-udwishlist-active {
+  position: absolute;
   display: block;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   padding: 50px;
-  width: 455px;
-  height: 150px;
-  margin-top: 25px;
-  margin-left: 1750px;
+  width: 285px;
+  height: 120px;
+  margin-top: 105px;
+  margin-left: 1400px;
 }
 
 .toggle-udwishlist h2 {
   text-align: center;
   color: #6a6f73;
-  margin-top: -15px;
+  margin-top: -25px;
   font-family: var(--font-stack-text);
   font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.6rem;
+  line-height: 1.2;
+  font-size: 1.2rem;
 }
 
 .toggle-udwishlist h3 {
-  text-align: center;</div>
+  text-align: center;
 
   padding: 15px;
 }
@@ -652,24 +702,25 @@ display: block;
   display: none;
 }
 .toggle-udcartlist-active {
+  position: absolute;
   display: block;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   padding: 50px;
-  width: 455px;
-  height: 150px;
-  margin-top: 25px;
-  margin-left: 1850px;
+  width: 285px;
+  height: 120px;
+  margin-top: 105px;
+  margin-left: 1450px;
 }
 
 .toggle-udcartlist h2 {
-  text-align: center;
+  
   color: #6a6f73;
-  margin-top: -15px;
+  margin-top: -35px;
   font-family: var(--font-stack-text);
   font-weight: 400;
   line-height: 1.4;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .toggle-udcartlist h3 {
@@ -685,34 +736,35 @@ display: block;
   display:none;
 }
 .toggle-udbellicon-active {
+  position: absolute;
   display: block;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   padding: 50px;
-  width: 530px;
-  height: 150px;
-  margin-top: 25px;
-  margin-left: 1850px;
+  width: 400px;
+  height: 130px;
+  margin-top: 115px;
+  margin-left: 1400px;
 }
 
 .toggle-udbellicon h2 {
   color: #2d2f31;
   margin-left: -20px;
-  margin-top: -15px;
+  margin-top: -25px;
   font-family: var(--font-stack-text);
   font-weight: 700;
-  line-height: 1.5rem;
-  font-size: 1.8rem;
+  line-height: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .toggle-udbellicon a {
   color: #5022c3;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .toggle-udbellicon h3 {
-  margin-left: 350px;
+  margin-left: 250px;
   margin-top: -20px;
 }
 
@@ -722,13 +774,14 @@ display: block;
   margin-top: 20px;
   font-family: var(--font-stack-text);
   font-weight: 400;
-  line-height: 1.4rem;
-  font-size: 1.4rem;
+  line-height: 1rem;
+  font-size: 1.2rem;
 }
 .toggle-name{
   display: none;
 }
 .toggle-name-active {
+  position: absolute;
   z-index: 1000;
   display: block;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
@@ -736,9 +789,9 @@ display: block;
   padding: 50px;
   width: 380px;
   height: 1600px;
-  margin-top: 25px;
-  margin-left: 2150px;
-  overflow: hidden;
+  margin-top: 125px;
+  margin-left: 1450px;
+  
   background-color: white;
 }
 
@@ -812,37 +865,40 @@ display: block;
 }
 
 .main-page {
-  position: fixed;
+ 
   width: 100%;
+ 
   max-width: 164rem;
   margin-right: auto;
   margin-left: auto;
-  padding-right: .4rem;
-  padding-left: 8.4rem;
+  padding-right: 10.4rem;
+  padding-left: 12.4rem;
   padding-top: 12.8rem;
-  padding-bottom: 4.8rem;
+ 
 }
-.Heading-main-page {
+.Heading-main-page h1{
   margin-bottom: 2.4rem;
   font-family: var(--font-stack-heading);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
   color: #2d2f31;
   font-size: 1.6rem;
+  margin-top: -80px;
 }
 .course-directory-page {
   margin-bottom: 3.2rem;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .desktop-filter-page {
+  margin-top: -20px;
 }
 
 .filter-panel-heading {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2.4rem;
+  
 }
 
 .filter-button-page {
@@ -882,7 +938,7 @@ display: block;
 }
 
 .filter-form {
-  width: 270px;
+  width: 230px;
   height: 90px;
   margin-left: 2px;
   border: 2px solid #2d2f31;
@@ -926,15 +982,15 @@ display: block;
 
 .results {
   font-family: var(--font-stack-heading);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   align-self: center;
   text-align: right;
   color: #6a6f73;
   display: flex;
-  margin-left: 1900px;
+justify-content: flex-end;
   margin-top: -100px;
 }
 
@@ -944,6 +1000,7 @@ display: block;
 }
 
 .filterpanel {
+  margin-top: 110px;
   display: grid;
   gap: 1.6rem;
   grid-template-columns: repeat(12, 1fr);
@@ -979,21 +1036,25 @@ display: block;
 .ratings {
   display: flex;
   flex: 1;
-  font-size: 1.9rem;
+  font-size: 1.2rem;
 }
 .ratings h3 {
   font-family: var(--font-stack-heading);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 2rem;
+  font-size: 1.22rem;
 
-  font-weight: 400;
+  
   max-width: 60rem;
 }
 .module-heading i {
   transition: transform 150ms linear;
-}
+}font-family: var(--font-stack-heading);
+font-weight: 400;
+line-height: 1.2;
+letter-spacing: 0;
+font-size: 1.2rem;
 .panel-module-content-wrapper {
   max-height: none;
   overflow: visible;
@@ -1023,8 +1084,8 @@ display: block;
 .answer {
   font-family: var(--font-stack-text);
   font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.6rem;
+  line-height: 1.2;
+  font-size: 1.2rem;
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
@@ -1054,8 +1115,8 @@ label {
   margin-right: 0.8rem rem;
   position: relative;
   top: 0.2rem;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
 
 
   
@@ -1065,8 +1126,8 @@ label {
   border:50px solid black;
 }
 .language-content label {
-  margin-left: 10px;
-  font-size: 1.4em;
+  margin-left: 5px;
+  font-size: 1rem;
 }
 .rating-content .answer {
   color: transparent;
@@ -1074,14 +1135,18 @@ label {
   margin-right: 0.8rem rem;
   position: relative;
   top: 0.2rem;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 1.4em;
 }
-
+.rating-content label{
+ 
+  font-size: 1rem;
+}
 .showmore {
   color: #5022c3;
   font-family: var(--font-stack-heading);
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 20px;
   letter-spacing: 0;
   font-size: 1.2rem;
@@ -1106,8 +1171,8 @@ label {
   display: block;
   transition: opacity linear 100ms;
   
-  width: 380px;
-  height: 195px;
+  width: 240px;
+  height: 135px;
 }
 .course-module {
   padding-bottom: 1.6rem;
@@ -1128,10 +1193,17 @@ label {
 
   min-width: 1px;
 }
-
-.course-card-main-content a {
+.course-card-main-content h3{
   font-family: var(--font-stack-heading);
   font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-size: 1rem;
+
+}
+.course-card-main-content a {
+  font-family: var(--font-stack-heading);
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
   font-size: 1.6rem;
@@ -1141,33 +1213,39 @@ label {
 
 .course-card-main-content p {
   font-family: var(--font-stack-text);
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 1.2;
+  font-size: 1rem;
+  
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
  
   
-}
+
 .course-card-instructor {
   font-family: var(--font-stack-text);
   font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.2rem;
+  line-height: 1.2;
+  font-size: 1rem;
 }
 .starrating .point {
   font-family: var(--font-stack-heading);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .starrating .numbers {
   font-family: var(--font-stack-text);
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.2rem;
+  font-size: 1rem;
   color: #6a6f73;
-  margin-left: 0.4rem;
+  margin-left: 0.2rem;
 }
 
 .starrating img {
@@ -1176,15 +1254,15 @@ label {
 
 .levels {
   font-family: var(--font-stack-text);
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.4;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .highest {
   font-family: var(--font-stack-text);
-  font-weight: 700;
-  line-height: 1.4;
+  font-weight: 400;
+  line-height: 1.2rem;
   font-size: 1.2rem;
   display: inline-flex;
   align-items: center;
@@ -1210,10 +1288,10 @@ label {
 .first{
   
   font-family: var(--font-stack-heading);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     position: absolute;
  
 
@@ -1224,7 +1302,7 @@ label {
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   
   margin-top: 35px;
   color: #6a6f73;

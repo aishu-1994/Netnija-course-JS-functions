@@ -96,15 +96,17 @@ hovsection.addEventListener("mouseout", () => {
 
 const udbusiness = document.querySelector(".udbusiness");
 const toggleUdbusiness = document.querySelector(".toggle-Udbusiness");
+const udteach = document.querySelector(".udteach");
+const toggleUdteach = document.querySelector(".toggle-Udteach");
 
 udbusiness.addEventListener("mouseover", () => {
   /*hideAllContents();*/
   console.log("qwe");
   toggleUdbusiness.classList.add("toggle-Udbusiness-active");
 });
-udbusiness.addEventListener("mouseout", () => {
-  toggleUdbusiness.classList.remove("toggle-udbusiness-active");
-});
+// udbusiness.addEventListener("mouseout", () => {
+//   toggleUdbusiness.classList.remove("toggle-udbusiness-active");
+// });
 
 toggleUdbusiness.addEventListener("mouseover", () => {
   toggleUdbusiness.classList.add("toggle-Udbusiness-active");
@@ -114,12 +116,10 @@ toggleUdbusiness.addEventListener("mouseout", () => {
   toggleUdbusiness.classList.remove("toggle-Udbusiness-active");
 });
 
-const udteach = document.querySelector(".udteach");
-const toggleUdteach = document.querySelector(".toggle-Udteach");
-
 udteach.addEventListener("mouseover", () => {
   /*hideAllContents();*/
-  console.log("qwe");
+  toggleUdbusiness.classList.remove("toggle-Udbusiness-active");
+
   toggleUdteach.classList.add("toggle-Udteach-active");
 });
 
@@ -139,7 +139,7 @@ const toggleUdlearning = document.querySelector(".toggle-Udlearning");
 
 udlearning.addEventListener("mouseover", () => {
   /*hideAllContents();*/
-  console.log("qwe");
+  toggleUdteach.classList.remove("toggle-Udteach-active");
   toggleUdlearning.classList.add("toggle-Udlearning-active");
 });
 
