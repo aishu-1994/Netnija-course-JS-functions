@@ -73,13 +73,13 @@ function showCourses(courses) {
     courseList.appendChild(courseEl);
   });
 }
+
 const categories = document.querySelector(".nav-categories");
 const hovsection = document.querySelector(".hove-section");
-console.log(categories);
+
 categories.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
-  console.log("qwe");
   hovsection.classList.add("hove-section-active");
+  toggleUdbusiness.classList.remove("toggle-Udbusiness-active");
 });
 
 categories.addEventListener("mouseout", () => {
@@ -100,29 +100,27 @@ const udteach = document.querySelector(".udteach");
 const toggleUdteach = document.querySelector(".toggle-Udteach");
 
 udbusiness.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
-  console.log("qwe");
+  hovsection.classList.remove("hove-section-active");
+  toggleUdteach.classList.remove("toggle-Udteach-active");
   toggleUdbusiness.classList.add("toggle-Udbusiness-active");
 });
-// udbusiness.addEventListener("mouseout", () => {
-//   toggleUdbusiness.classList.remove("toggle-udbusiness-active");
-// });
 
+udbusiness.addEventListener("mouseout", () => {
+  toggleUdbusiness.classList.remove("toggle-Udbusiness-active");
+});
 toggleUdbusiness.addEventListener("mouseover", () => {
   toggleUdbusiness.classList.add("toggle-Udbusiness-active");
 });
-
 toggleUdbusiness.addEventListener("mouseout", () => {
   toggleUdbusiness.classList.remove("toggle-Udbusiness-active");
 });
 
 udteach.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
   toggleUdbusiness.classList.remove("toggle-Udbusiness-active");
+  toggleUdlearning.classList.remove("toggle-Udlearning-active");
 
   toggleUdteach.classList.add("toggle-Udteach-active");
 });
-
 udteach.addEventListener("mouseout", () => {
   toggleUdteach.classList.remove("toggle-udteach-active");
 });
@@ -140,11 +138,13 @@ const toggleUdlearning = document.querySelector(".toggle-Udlearning");
 udlearning.addEventListener("mouseover", () => {
   /*hideAllContents();*/
   toggleUdteach.classList.remove("toggle-Udteach-active");
+  toggleUdwishlist.classList.remove("toggle-udwishlist-active");
+
   toggleUdlearning.classList.add("toggle-Udlearning-active");
 });
 
 udlearning.addEventListener("mouseout", () => {
-  toggleUdlearning.classList.remove("toggle-udlearning-active");
+  toggleUdlearning.classList.add("toggle-Udlearning-active");
 });
 
 toggleUdlearning.addEventListener("mouseover", () => {
@@ -159,8 +159,9 @@ const udwishlist = document.querySelector(".udwishlist");
 const toggleUdwishlist = document.querySelector(".toggle-udwishlist");
 
 udwishlist.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
-  console.log("qwe");
+  toggleUdlearning.classList.remove("toggle-Udlearning-active");
+  toggleUdcartlist.classList.remove("toggle-udcartlist-active");
+
   toggleUdwishlist.classList.add("toggle-udwishlist-active");
 });
 
@@ -169,11 +170,11 @@ udwishlist.addEventListener("mouseout", () => {
 });
 
 toggleUdwishlist.addEventListener("mouseover", () => {
-  toggleUdwishlist.classList.add("toggle-Udwishlist-active");
+  toggleUdwishlist.classList.add("toggle-udwishlist-active");
 });
 
 toggleUdwishlist.addEventListener("mouseout", () => {
-  toggleUdwishlist.classList.remove("toggle-Udwishlist-active");
+  toggleUdwishlist.classList.remove("toggle-udwishlist-active");
 });
 
 const udcartlist = document.querySelector(".udcartlist");
@@ -234,4 +235,42 @@ toggleUdnameAS.addEventListener("mouseout", () => {
 });
 udnameAS.addEventListener("mouseout", () => {
   toggleUdnameAS.classList.remove("toggle-name-active");
+});
+
+/////////////////////////////////////////////////////////////////////
+
+const upArrow = document.querySelector(".uparrow1");
+console.log(upArrow);
+const contentwrapper = document.querySelector(".panel-module-content-wrapper");
+// console.log(contentwrapper);
+
+upArrow.addEventListener("click", () => {
+  console.log("123");
+
+  // contentwrapper.classList.add("panel-module-content-wrapper-hidden");
+  {
+    contentwrapper.classList.contains("panel-module-content-wrapper-hidden")
+      ? contentwrapper.classList.remove("panel-module-content-wrapper-hidden")
+      : contentwrapper.classList.add("panel-module-content-wrapper-hidden");
+  }
+});
+
+// const languagecontent = document.querySelectorAll(".language-content");
+
+const panelmodule = document.querySelectorAll(".panel-module");
+// const uparrowall = document.querySelector(".uparrow");
+panelmodule.forEach((module, index) => {
+  const uparrowall = module.querySelector(".uparrow");
+  const languagecontent = module.querySelector(".language-content");
+  // console.log(languagecontent);
+  uparrowall.addEventListener("click", () => {
+    console.log(index);
+    {
+      languagecontent.classList.contains("language-content-hidden")
+        ? languagecontent.classList.remove("language-content-hidden") &&
+          languagecontent.classList.add("language-content-show")
+        : languagecontent.classList.add("language-content-hidden") &&
+          languagecontent.classList.remove("language-content-show");
+    }
+  });
 });
