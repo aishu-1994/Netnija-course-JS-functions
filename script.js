@@ -274,3 +274,37 @@ panelmodule.forEach((module, index) => {
     }
   });
 });
+
+const btnbar = document.querySelector(".btn-bar");
+const mobilename = document.querySelector(".mobile-name1");
+
+const closebutton = document.querySelector(".close-btn");
+console.log(closebutton);
+btnbar.addEventListener("click", () => {
+  mobilename.classList.add("mobile-name1-show");
+  closebutton.classList.remove("close-btn-hidden");
+  closebutton.classList.add("close-btn-show");
+});
+
+closebutton.addEventListener("click", () => {
+  mobilename.classList.remove("mobile-name1-show");
+  closebutton.classList.add("close-btn-show");
+  closebutton.classList.remove("close-btn-show");
+});
+const btnside = document.querySelector(".mobile-btn-side");
+const btnright = document.querySelector(".mobile-btn-right");
+const menubar = document.querySelector(".mobile-menu");
+
+btnright.addEventListener("click", () => {
+  menubar.classList.add("mobile-menu-show");
+});
+btnside.addEventListener("click", () => {
+  menubar.classList.remove("mobile-menu-show");
+  mobilename.classList.add("mobile-name1-show");
+});
+
+const btnfilter = document.querySelector(".btn-ud ");
+const filtersidebar = document.querySelector(".filterpanel-sidebar");
+btnfilter.addEventListener("click", () => {
+  filtersidebar.classList.add("filterpanel-sidebar-show");
+});
