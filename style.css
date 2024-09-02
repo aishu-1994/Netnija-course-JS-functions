@@ -158,14 +158,14 @@ margin-top: 10px;
 
  
   .btn{
-    margin-left: 80px;
+    margin-left: 150px;
     
   }
 
 
   .ud-img{
    
-    margin-left: 130px;
+    margin-left: 100px;
     margin-top: -1px;
   width: 81px;
      
@@ -175,7 +175,7 @@ margin-top: 10px;
    .udcartlistm img {
     display: flex;
    margin-top: 12px;
-   margin-left: 35px;
+   margin-left: 50px;
     width: 28px;
     height: 26px;
   }
@@ -1428,6 +1428,13 @@ height: 200px;
   margin-top: 60px;
 }
 
+@media screen and (max-width: 425px) {
+  .panel{
+    margin-left: -250px;
+  }
+}
+
+
 .filterpanel {
   margin-top: 110px;
   display: grid;
@@ -1461,7 +1468,7 @@ height: 200px;
     grid-column: 1/4;
     max-height: 250rem;
     transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
-    margin-left: -10px;
+    margin-left: 240px;
     width: 300px;
     position: absolute;
   }
@@ -1660,7 +1667,7 @@ label {
 }
 
 @media screen and (max-width: 425px) {
-  Get hands -on & depth experience using the latest Vue 3 features (such as composition API)
+  
   .course-card-img-container img {
     width: 66px;
     height: 66px;
@@ -1896,3 +1903,8 @@ padding: 10px;
 
 }
 
+@media screen and (max-width: 425px) {
+  .popup{
+    display: none;
+  }
+}
