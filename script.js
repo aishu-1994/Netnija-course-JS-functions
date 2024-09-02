@@ -10,7 +10,7 @@ async function getCourses() {
 
 function showCourses(courses) {
   console.log(courses);
-  courseList.innerHTML = "";
+  courseList.innerHTML = " ";
   courses.forEach((course) => {
     const {
       Image,
@@ -21,7 +21,7 @@ function showCourses(courses) {
       Rating,
       Duration,
       scores,
-      popup,
+      popups,
       firstprice,
       secondprice,
     } = course;
@@ -31,8 +31,10 @@ function showCourses(courses) {
     courseEl.classList.add("course");
 
     courseEl.innerHTML = `
-      <div class="course-list">
+      
         <div class="course-list-container">
+
+         
           <div class="course-module">
             <div class="course-card">
               <div class="course-card-img-container">
@@ -58,11 +60,30 @@ function showCourses(courses) {
                     ${Duration}
                   </div>
                   <span class="highest">${scores}</span>
+
+   </div>
+  
+  
+
+
+
+    
                  <div class="prices">
       <div class="first">${firstprice}</div>
         <div class="second">${secondprice}</div>
       </div>
-                </div>
+
+       <div class="popup">
+    <div class="popup-heading"><h2>What you'll learn</h2></div>
+    <p class="one">${popups[0]}</p>
+    <p class="two">${popups[1]}</p>
+    <p class="three">${popups[2]}</p>
+    <div class="addto-Cart"><h2>Add To Cart</h2></div>
+    <div class="circle"></div>
+    <i class="fa fas-heart"></i>
+    </div>
+      </div>
+                
               </div>
             </div>
           </div>
@@ -302,9 +323,33 @@ btnside.addEventListener("click", () => {
   menubar.classList.remove("mobile-menu-show");
   mobilename.classList.add("mobile-name1-show");
 });
-
+const closebuttonmobile2 = document.querySelector(".close-btn-mobile");
+console.log(closebuttonmobile2);
+const headermobile = document.querySelector(".header-container-mobile");
+const mainpage = document.querySelector(".main-page");
+const results = document.querySelector(".results");
 const btnfilter = document.querySelector(".btn-ud ");
 const filtersidebar = document.querySelector(".filterpanel-sidebar");
 btnfilter.addEventListener("click", () => {
   filtersidebar.classList.add("filterpanel-sidebar-show");
+  results.classList.add("results-show");
+  mainpage.classList.add("main-page-show");
+  headermobile.classList.add("header-container-mobile-hidden");
+  closebuttonmobile2.classList.add("close-btn-mobile-show");
+});
+closebuttonmobile2.addEventListener("click", () => {
+  filtersidebar.classList.remove("filterpanel-sidebar-show");
+  results.classList.remove("results-show");
+  mainpage.classList.remove("main-page-show");
+  headermobile.classList.remove("header-container-mobile-hidden");
+  closebuttonmobile2.classList.remove("close-btn-mobile-show");
+});
+const coursemodule = document.querySelectorAll(".course-module");
+
+coursemodule.forEach((cm) => {
+  console.log(cm);
+  const coursecard = cm.querySelector(".course-card");
+  coursecard.addEventListener("click", () => {
+    console.log(147);
+  });
 });

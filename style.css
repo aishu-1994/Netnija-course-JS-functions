@@ -99,7 +99,12 @@ body {
   font-family: var(--font-stack-text);
   min-width: 60rem;
 }
-
+@media screen and (max-width: 425px) {
+  body{
+   overflow: hidden;
+    
+  }
+}
 
 
 
@@ -140,6 +145,12 @@ body {
     margin-top: 6px;
     
   }
+.header-container-mobile-hidden{
+  display: none;
+  
+}
+
+  
   .btn-bar{
 margin-top: 10px;
 
@@ -1143,6 +1154,41 @@ display: block;
   padding-top: 12.8rem;
  
 }
+.close-btn-mobile{
+  display: none;
+  
+  
+}
+
+
+@media screen and (max-width: 425px) {
+  .main-page-show{
+  background-color: #6a6c6e;
+    
+ 
+  }
+
+  .close-btn-mobile{
+    display: none;
+    
+    
+  }
+  
+  .close-btn-mobile-show{
+    z-index: 1000;
+    display: block;
+margin-top: -195px;
+    border: 1px solid grey;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+margin-left: -120px;
+background-color: white;
+
+}
+ 
+}
 .Heading-main-page h1{
   margin-bottom: 2.4rem;
   font-family: var(--font-stack-heading);
@@ -1341,6 +1387,7 @@ margin-top: -20px;
 }
 }
 .results {
+
   font-family: var(--font-stack-heading);
   font-weight: 400;
   line-height: 1.2;
@@ -1354,6 +1401,28 @@ justify-content: flex-end;
   margin-top: -100px;
 }
 
+
+@media screen and (max-width: 425px) {
+.results{
+  display: none;
+
+}
+}
+@media screen and (max-width: 425px) {
+.results-show{
+  display: block;
+  margin-left:-10px;
+  position: absolute;
+  margin-top: -125px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
+  0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  background-color: white;
+  z-index: 1000;
+  width:300px ;
+height: 200px;
+  padding-right: 150px;
+}
+}
 .panel {
   position: relative;
   margin-top: 60px;
@@ -1370,6 +1439,7 @@ justify-content: flex-end;
   width: 100%;
 }
 .filterpanel-sidebar {
+ 
   grid-column: 1/4;
   max-height: 240rem;
   transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
@@ -1387,12 +1457,12 @@ justify-content: flex-end;
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     background-color: white;
     z-index: 1000;
-    margin-top: auto;
+    margin-top: -150px;
     grid-column: 1/4;
     max-height: 250rem;
     transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
-    margin-left: -70px;
-    width: 280px;
+    margin-left: -10px;
+    width: 300px;
     position: absolute;
   }
 }
@@ -1572,6 +1642,7 @@ label {
 }
 .course-list-container{
   margin-bottom: 3.2rem;
+  position: relative;
 }
 
 @media screen and (max-width: 425px) {
@@ -1589,7 +1660,7 @@ label {
 }
 
 @media screen and (max-width: 425px) {
-
+  Get hands -on & depth experience using the latest Vue 3 features (such as composition API)
   .course-card-img-container img {
     width: 66px;
     height: 66px;
@@ -1770,60 +1841,58 @@ label {
   text-decoration: line-through;
 
 }
-
 .popup{
-  display: none;
-  margin-top: 20px;
-margin-left: 420px;
-width: 650px;
-height: 420px;
-padding: 10px;
+ display:block;
+
+}
+.popup-hidden{
+display: none;
+}
+.popup{
+  margin-left: 30px;
+  height: 300px;
+  width: 400px;
+  background-color: white;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 150px;
+  z-index: 1000;
+  position: absolute;
   box-shadow: 0 4px 12px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 4px 12px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-
 }
 
-.popup-learning{
-  margin-left:95px;
-  margin-top: 20px;
-}
-
-
-
-.popup-heading{
-
+.popup-heading h2{
+margin-top: 30px;
+margin-left: 50px;
   font-family: var(--font-stack-heading);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 1.0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.popup-learning p{
-
+.popup p{
+  margin-left: 50px;
   font-family: var(--font-stack-heading);
-  font-weight: 100;
+  font-weight: 50;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   margin-top: 10px;
 }
 
-.addto-Cart{
-
+.addto-Cart h2{
+font-size: 1.2rem;
   color: white;
-  margin-left: -2px;
+  margin-left: 40px;
   margin-top: 20px;
   border: solid 1px transparent;
   background-color: var(--color-purple-300);
 padding: 10px;
   text-align: center;
-  height: 65px;;
-  width: 455px;
+  height: 45px;;
+  width: 285px;
 
 }
 
-.popup-learning i{
-  margin-left: -40px;
-  margin-top:20px ;
-}

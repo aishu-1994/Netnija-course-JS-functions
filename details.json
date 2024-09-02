@@ -10,7 +10,7 @@
     "scores": "Highest Rated",
     "firstprice": "399",
     "secondprice": "2,799",
-    "popup": [
+    "popups": [
       "Learn how to create Vue 3 appications from the ground-up",
       "Get in depth knowledge of Vue features like the Vue Router,Vue CLI,options API,composition API,Teleport etc",
       "Get hands -on & depth experience using the latest Vue 3 features (such as composition API)"
@@ -27,7 +27,7 @@
     "Duration": "20.5 total hours 188 lectures All Levels",
     "firstprice": "399",
     "secondprice": "3,699",
-    "popup": [
+    "popups": [
       "Learn how to program with modern JavaScript ,from the very begining to more advanced options",
       "Learn all about OOP(object oriented programming) with JavaScript,working with prototypes and classes",
       "Learn to how to create real-world-front-end application with JavaScript(quizes,weather apps,chat rooms etc"
@@ -45,7 +45,7 @@
     "Duration": "23.5 total hours 224 lectures All Levels",
     "firstprice": "399",
     "secondprice": "3,699",
-    "popup": [
+    "popups": [
       "Learn how to create modern and dynamic React websites from the ground-up",
       "Learn about components,props,hooks,Context,State,Reducers & the React Router",
       "Learn how to implement a database, authentication &file uploads with React and Firebase"
@@ -63,7 +63,7 @@
     "Duration": "10.5 total hours 107 lectures All Levels",
     "firstprice": "399",
     "secondprice": "3,099",
-    "popup": [
+    "popups": [
       "Learn D3 JS & Firebase from the ground-up",
       "Create data driven visualizations(graphs, charts,diagrams) with D3 JS",
       "Store (and retrieve) data in a real-time database clled firestore(firebase"
@@ -82,7 +82,7 @@
     "scores": "Bestseller",
     "firstprice": "399",
     "secondprice": "3,099",
-    "popup": [
+    "popups": [
       "Learn modern Angular,including standalone componenets & signals from the groun up & in great detail",
       "Learn how to send HTTP requests ,implement routing,authenticate users or hanle complex forms-and much more!",
       "Develop modern,complex,responsive and scalable web applications with Angular"
