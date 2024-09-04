@@ -38,16 +38,16 @@ function showCourses(courses) {
           <div class="course-module">
             <div class="course-card">
               <div class="course-card-img-container">
-                <img src="${Image}" />
-              </div>
+                <img src="${Image}"/>
+       </div>
 
               <div class="course-card-main-content">
                 <a href="${courseLink}">
                   <h3>${CourseName}</h3>
                 </a>
-                <p>
+                <h4>
                  ${Description}
-                </p>
+                </h4>
                 <div class="course-card-instructor">
                   The <strong>Net</strong>
                   <strong>Ninja</strong> (Shaun pelling)
@@ -73,25 +73,46 @@ function showCourses(courses) {
         <div class="second">${secondprice}</div>
       </div>
 
-       <div class="popup">
-    <div class="popup-heading"><h2>What you'll learn</h2></div>
-    <p class="one">${popups[0]}</p>
-    <p class="two">${popups[1]}</p>
-    <p class="three">${popups[2]}</p>
-    <div class="addto-Cart"><h2>Add To Cart</h2></div>
-    <div class="circle"></div>
-    <i class="fa fas-heart"></i>
-    </div>
-      </div>
+<div class="popup">
+
+<div class="popup-heading"><h2>What you'll learn</h2></div>
+
+<p class="one">${popups[0]}</p>
+<p class="two">${popups[1]}</p>
+<p class="three">${popups[2]}</p>
+<div class="addto-Cart"><h2>Add to Cart</h2></div>
+<div class="circle"></div>
+<i class="fa fas-heart"></i>
+</div>
+
                 
               </div>
             </div>
           </div>
         </div>
-      </div>
+      
     `;
 
     courseList.appendChild(courseEl);
+  });
+  const coursecontent = document.querySelectorAll(".course-card-main-content");
+
+  coursecontent.forEach((element) => {
+    const popup = element.querySelector(".popup");
+
+    element.addEventListener("mouseover", () => {
+      popup.classList.add("popup-show");
+    });
+
+    element.addEventListener("mouseout", () => {
+      popup.classList.remove("popup-show");
+    });
+    popup.addEventListener("mouseover", () => {
+      popup.classList.add("popup-show");
+    });
+    popup.addEventListener("mouseout", () => {
+      popup.classList.remove("popup-show");
+    });
   });
 }
 
@@ -178,7 +199,8 @@ toggleUdlearning.addEventListener("mouseout", () => {
 
 const udwishlist = document.querySelector(".udwishlist");
 const toggleUdwishlist = document.querySelector(".toggle-udwishlist");
-
+const udcartlist = document.querySelector(".udcartlist");
+const toggleUdcartlist = document.querySelector(".toggle-udcartlist");
 udwishlist.addEventListener("mouseover", () => {
   toggleUdlearning.classList.remove("toggle-Udlearning-active");
   toggleUdcartlist.classList.remove("toggle-udcartlist-active");
@@ -198,12 +220,10 @@ toggleUdwishlist.addEventListener("mouseout", () => {
   toggleUdwishlist.classList.remove("toggle-udwishlist-active");
 });
 
-const udcartlist = document.querySelector(".udcartlist");
-const toggleUdcartlist = document.querySelector(".toggle-udcartlist");
-
 udcartlist.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
-  console.log("qwe");
+  toggleUdwishlist.classList.remove("toggle-udwishlist-active");
+  toggleUdbellicon.classList.remove("toggle-ubellicon-active");
+
   toggleUdcartlist.classList.add("toggle-udcartlist-active");
 });
 
@@ -211,19 +231,17 @@ udcartlist.addEventListener("mouseout", () => {
   toggleUdcartlist.classList.remove("toggle-udcartlist-active");
 });
 toggleUdcartlist.addEventListener("mouseover", () => {
-  toggleUdcartlist.classList.add("toggle-Udcartlist-active");
+  toggleUdcartlist.classList.add("toggle-udcartlist-active");
 });
 
 toggleUdcartlist.addEventListener("mouseout", () => {
-  toggleUdcartlist.classList.remove("toggle-Udcartlist-active");
+  toggleUdcartlist.classList.remove("toggle-udcartlist-active");
 });
 
 const udbellicon = document.querySelector(".udbellicon");
 const toggleUdbellicon = document.querySelector(".toggle-udbellicon");
 
 udbellicon.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
-  console.log("qwe");
   toggleUdbellicon.classList.add("toggle-udbellicon-active");
 });
 toggleUdbellicon.addEventListener("mouseover", () => {
@@ -242,8 +260,6 @@ const udnameAS = document.querySelector(".name-AS");
 const toggleUdnameAS = document.querySelector(".toggle-name");
 
 udnameAS.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
-  console.log("qwe");
   toggleUdnameAS.classList.add("toggle-name-active");
 });
 
@@ -301,7 +317,9 @@ const mobilename = document.querySelector(".mobile-name1");
 
 const closebutton = document.querySelector(".close-btn");
 console.log(closebutton);
-btnbar.addEventListener("click", () => {
+//127.0.0.1:5502/index.html
+
+http: btnbar.addEventListener("click", () => {
   mobilename.classList.add("mobile-name1-show");
   closebutton.classList.remove("close-btn-hidden");
   closebutton.classList.add("close-btn-show");
@@ -344,12 +362,13 @@ closebuttonmobile2.addEventListener("click", () => {
   headermobile.classList.remove("header-container-mobile-hidden");
   closebuttonmobile2.classList.remove("close-btn-mobile-show");
 });
-const coursemodule = document.querySelectorAll(".course-module");
 
-coursemodule.forEach((cm) => {
-  console.log(cm);
-  const coursecard = cm.querySelector(".course-card");
-  coursecard.addEventListener("click", () => {
-    console.log(147);
-  });
-});
+// const coursecard = document.querySelectorAll(".course-card");
+// coursecard.forEach((cc) => {
+// const maincontent = cc.getElementsByClassName("course-card-main-content");
+// console.log(maincontent);
+// maincontent[0].addEventListener("click", () => {
+//   console.log("147");
+// });
+
+// });

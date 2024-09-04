@@ -87,5 +87,62 @@
       "Learn how to send HTTP requests ,implement routing,authenticate users or hanle complex forms-and much more!",
       "Develop modern,complex,responsive and scalable web applications with Angular"
     ]
+  },
+
+  {
+    "Image": "https://img-c.udemycdn.com/course/240x135/328476_3125_4.jpg",
+    "CourseName": "Complete ASP NET MVC web Development-Newbie to Ninja",
+    "courseLink": "https://www.udemy.com/course/better-web-development-pro-techniques-for-success/",
+    "Description": "Learn how to use D3 (v5) & Firebase (Firestore) to create dynamic SVG data visualizations. Bar charts, pie charts...",
+    "Source": "The Net Ninja(shaun pelling)",
+
+    "Rating": ["3.9", " svgexport-19.svg", "(1,688)"],
+    "Duration": "55.5 total hours 756 lectures All Levels",
+    "scores": "Bestseller",
+    "firstprice": "549",
+    "secondprice": "3,099",
+    "popups": [
+      "Learn modern Angular,including standalone componenets & signals from the groun up & in great detail",
+      "Learn how to send HTTP requests ,implement routing,authenticate users or hanle complex forms-and much more!",
+      "Develop modern,complex,responsive and scalable web applications with Angular"
+    ]
+  },
+
+  {
+    "Image": "https://img-b.udemycdn.com/course/240x135/1844356_cba1_8.jpg",
+    "CourseName": ".NET Core MVC-The Complete Guide 2024 [E-commerce][.NET8]",
+    "courseLink": "/course/build-data-uis-with-d3-firebase/",
+    "Description": "Learn how to use D3 (v5) & Firebase (Firestore) to create dynamic SVG data visualizations. Bar charts, pie charts...",
+    "Source": "The Net Ninja(shaun pelling)",
+
+    "Rating": ["4.5", " svgexport-19.svg", "(1,688)"],
+    "Duration": "55.5 total hours 756 lectures All Levels",
+    "scores": "Bestseller",
+    "firstprice": "549",
+    "secondprice": "3,099",
+    "popups": [
+      "Learn modern Angular,including standalone componenets & signals from the groun up & in great detail",
+      "Learn how to send HTTP requests ,implement routing,authenticate users or hanle complex forms-and much more!",
+      "Develop modern,complex,responsive and scalable web applications with Angular"
+    ]
+  },
+
+  {
+    "Image": "https://img-c.udemycdn.com/course/240x135/5547424_4386_3.jpg",
+    "CourseName": "javasScript Interview Masterclass:Top 300 Questions (2024)",
+    "courseLink": "/course/build-data-uis-with-d3-firebase/",
+    "Description": "Learn how to use D3 (v5) & Firebase (Firestore) to create dynamic SVG data visualizations. Bar charts, pie charts...",
+    "Source": "The Net Ninja(shaun pelling)",
+
+    "Rating": ["4.4", " svgexport-19.svg", "(1,688)"],
+    "Duration": "55.5 total hours 756 lectures All Levels",
+    "scores": "Bestseller",
+    "firstprice": "549",
+    "secondprice": "3,099",
+    "popups": [
+      "Learn modern Angular,including standalone componenets & signals from the groun up & in great detail",
+      "Learn how to send HTTP requests ,implement routing,authenticate users or hanle complex forms-and much more!",
+      "Develop modern,complex,responsive and scalable web applications with Angular"
+    ]
   }
 ]
