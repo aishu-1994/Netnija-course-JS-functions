@@ -178,7 +178,6 @@ const udlearning = document.querySelector(".udlearning");
 const toggleUdlearning = document.querySelector(".toggle-Udlearning");
 
 udlearning.addEventListener("mouseover", () => {
-  /*hideAllContents();*/
   toggleUdteach.classList.remove("toggle-Udteach-active");
   toggleUdwishlist.classList.remove("toggle-udwishlist-active");
 
@@ -240,37 +239,38 @@ toggleUdcartlist.addEventListener("mouseout", () => {
 
 const udbellicon = document.querySelector(".udbellicon");
 const toggleUdbellicon = document.querySelector(".toggle-udbellicon");
-
+const udnameAS = document.querySelector(".name-AS");
+const toggleUdnameAS = document.querySelector(".toggle-name");
 udbellicon.addEventListener("mouseover", () => {
+  toggleUdlearning.classList.remove(".toggle-name-active");
+  toggleUdcartlist.classList.remove("toggle-udcartlist-active");
   toggleUdbellicon.classList.add("toggle-udbellicon-active");
-});
-toggleUdbellicon.addEventListener("mouseover", () => {
-  toggleUdbellicon.classList.add("toggle-Udbellicon-active");
-});
-
-toggleUdbellicon.addEventListener("mouseout", () => {
-  toggleUdbellicon.classList.remove("toggle-Udbellicon-active");
 });
 
 udbellicon.addEventListener("mouseout", () => {
   toggleUdbellicon.classList.remove("toggle-udbellicon-active");
 });
+toggleUdbellicon.addEventListener("mouseover", () => {
+  toggleUdbellicon.classList.add("toggle-udbellicon-active");
+});
 
-const udnameAS = document.querySelector(".name-AS");
-const toggleUdnameAS = document.querySelector(".toggle-name");
+toggleUdbellicon.addEventListener("mouseout", () => {
+  toggleUdbellicon.classList.remove("toggle-udbellicon-active");
+});
 
 udnameAS.addEventListener("mouseover", () => {
   toggleUdnameAS.classList.add("toggle-name-active");
 });
 
+udnameAS.addEventListener("mouseout", () => {
+  toggleUdnameAS.classList.remove("toggle-name-active");
+});
+
 toggleUdnameAS.addEventListener("mouseover", () => {
-  toggleUdnameAS.classList.add("toggle-toggleUdnameAS-active");
+  toggleUdnameAS.classList.add("toggle-name-active");
 });
 
 toggleUdnameAS.addEventListener("mouseout", () => {
-  toggleUdnameAS.classList.remove("toggle-toggleUdnameAS-active");
-});
-udnameAS.addEventListener("mouseout", () => {
   toggleUdnameAS.classList.remove("toggle-name-active");
 });
 
@@ -279,12 +279,10 @@ udnameAS.addEventListener("mouseout", () => {
 const upArrow = document.querySelector(".uparrow1");
 console.log(upArrow);
 const contentwrapper = document.querySelector(".panel-module-content-wrapper");
-// console.log(contentwrapper);
 
 upArrow.addEventListener("click", () => {
   console.log("123");
 
-  // contentwrapper.classList.add("panel-module-content-wrapper-hidden");
   {
     contentwrapper.classList.contains("panel-module-content-wrapper-hidden")
       ? contentwrapper.classList.remove("panel-module-content-wrapper-hidden")
@@ -317,7 +315,6 @@ const mobilename = document.querySelector(".mobile-name1");
 
 const closebutton = document.querySelector(".close-btn");
 console.log(closebutton);
-//127.0.0.1:5502/index.html
 
 http: btnbar.addEventListener("click", () => {
   mobilename.classList.add("mobile-name1-show");
@@ -342,7 +339,7 @@ btnside.addEventListener("click", () => {
   mobilename.classList.add("mobile-name1-show");
 });
 const closebuttonmobile2 = document.querySelector(".close-btn-mobile");
-console.log(closebuttonmobile2);
+
 const headermobile = document.querySelector(".header-container-mobile");
 const mainpage = document.querySelector(".main-page");
 const results = document.querySelector(".results");
@@ -372,3 +369,29 @@ closebuttonmobile2.addEventListener("click", () => {
 // });
 
 // });
+btnheader = document.querySelector(".btn");
+console.log(btnheader);
+barheader = document.querySelector(".btn-bar");
+btnheaderimg = document.querySelector(".ud-img");
+cartlistheader = document.querySelector(".udcartlistm");
+searchfor = document.querySelector(".searchfor");
+searchcontainer = document.querySelector(".searchcontainer");
+
+searchclose = document.querySelector(".searchclose");
+btnheader.addEventListener("click", () => {
+  console.log(123);
+  barheader.classList.add("btn-bar-hidden");
+  btnheaderimg.classList.add("ud-img-hidden");
+  cartlistheader.classList.add("udcartlistm-hidden");
+  btnheader.classList.add("btn-hidden");
+  searchfor.classList.add("searchfor-show");
+  searchcontainer.classList.add("searchcontainer-show");
+});
+searchclose.addEventListener("click", () => {
+  barheader.classList.remove("btn-bar-hidden");
+  btnheaderimg.classList.remove("ud-img-hidden");
+  cartlistheader.classList.remove("udcartlistm-hidden");
+  btnheader.classList.remove("btn-hidden");
+  searchfor.classList.remove("searchfor-show");
+  searchcontainer.classList.remove("searchcontainer-show");
+});
