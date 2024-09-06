@@ -89,8 +89,8 @@
   padding: 0;
 }
 body {
-
   overflow-y: scroll;
+
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -100,6 +100,11 @@ body {
   min-width: 60rem;
 }
 
+@media screen and (max-width: 425px) {
+  body{
+    min-width:100% ;
+  }
+}
 
 
 
@@ -132,7 +137,7 @@ body {
 @media screen and (max-width: 425px) {
   .header-container-mobile{
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-    padding: 0 2.4rem;
+    padding: 0 1.4rem;
     position: relative;
     z-index: 1010;
     display: flex;
@@ -252,17 +257,18 @@ margin-top: 10px;
   .close-btn-show {
     display:block;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-    margin-left: 300px;
+position: absolute;
+margin-left: 280px;
     background-color: #fff;
    border: solid 1px grey;
-   width: 60px;
-   height: 60px;
+   width: 45px;
+   height: 35px;
      border-radius: 50%;
     opacity: 0.3;
   
 
-    margin-left: 250px;
-    padding: 12px;
+    
+    padding: 10px;
   }
 
 
@@ -272,16 +278,15 @@ margin-top: 10px;
 
   .mobile-name1-show {
     display: block;
-   position: fixed;
+    
     z-index: 1000;
 
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
       0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-    padding: 20px;
-    width: 300px;
+   
+    width: 250px;
     height: 1600px;
-    margin-top: 0px;
-    margin-left: -50px;
+    margin-left: -30px;
     opacity: 1;
     transition: opacity 250ms linear 250ms;
     background-color: white;
@@ -302,22 +307,22 @@ margin-top: 10px;
   }
   
   .mobile-name1 li {
-    margin-top: 30px;
+    padding: 15px;
     list-style-type: none;
   }
   .mobile-name1 .AS {
-    margin-top: 20px;
+    
     font-size: 1.4rem;
     color: white;
-    margin-left: 20px;
-  
+   padding: 15px;
+  margin: 5px;
     border: solid 1px black;
     background-color: #101112;
   width: 60px;
   height: 60px;
     border-radius: 50%;
-    padding: 15px;
-    margin-bottom: 15px;
+   
+    
         
       }
     
@@ -338,19 +343,20 @@ color: black;
 
   .name-background{
     background-color:#f7f9fa ;
-    margin-top: -30px;
+    
     height: 120px;
-    width: 285px;
-    margin-left: -5px;
+    width: 250px;
+  
   }
 
   
   .mobile-name .planeline1 {
-    margin-top: 40px;
+   width: 250px
+   
   }
   
   
-  .mobile-name .english {
+  .mobile-name.english {
     margin-left: 180px;
     margin-top: -10px;
     font-family: var(--font-stack-text);
@@ -415,7 +421,7 @@ margin-left: 40px;
 }
 
 .mobile-menu li {
-  margin-top: 30px;
+padding: 15px;
   list-style-type: none;
 
 }
@@ -545,11 +551,12 @@ background-color: white;
 }
 
 .fa-angle-right {
-  margin-top: -30px;
+  
   color: grey;
-  display: flex;
-  flex-direction: column;
-  margin-left: 250px;
+display: inline-flex;
+padding: 10px;
+margin-left: 200px;
+  
 }
 
 .straightline {
@@ -974,14 +981,14 @@ display: block;
   border: solid 0.5px lightgrey;
   margin-left: -48px;
   margin-top: 10px;
-  width: 360px;
+  width: 280px;
 }
 
 .planeline2 {
   border: solid 0.5px lightgrey;
   margin-left: -40px;
   margin-top: 20px;
-  width: 360px;
+  width: 320px;
 }
 
 .toggle-Udlearning h3 {
@@ -1214,7 +1221,7 @@ display: block;
 
 .main-page {
  
-  width: 100%;
+ 
  
   max-width: 164rem;
   margin-right: auto;
@@ -1232,6 +1239,19 @@ display: block;
 
 
 @media screen and (max-width: 425px) {
+  .main-page{
+    width: 100%;
+    overflow: hidden;
+
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0;
+   
+  }
+
   .main-page-show{
   background-color: #6a6c6e;
     
@@ -1247,13 +1267,13 @@ display: block;
   .close-btn-mobile-show{
     z-index: 1000;
     display: block;
-margin-top: -195px;
+
     border: 1px solid grey;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     position: absolute;
-margin-left: -180px;
+
 background-color: white;
 
 }
@@ -1273,9 +1293,10 @@ background-color: white;
 @media screen and (max-width: 425px) {
   .Heading-main-page h1{
     font-weight: 700;
-   margin-left: -160px;
-    margin-top: -180px;
+   margin-left: 0;
+    margin-top: 0;
     font-size: 1.4rem;
+  padding: 10px;
   }
 }
 
@@ -1285,7 +1306,7 @@ background-color: white;
 
 .course-directory-page {
   margin-bottom: 3.2rem;
-  margin-top: 10px;
+ 
 }
 
 .desktop-filter-page {
@@ -1301,9 +1322,9 @@ background-color: white;
 @media screen and (max-width: 425px) {
   .filter-panel-heading {
 
-   margin-left: -150px;
-
-    
+   margin-left: 0;
+padding-left: 25px;
+margin-bottom: 2.4rem; 
 
   }
 }
@@ -1326,7 +1347,7 @@ background-color: white;
   font-size: 1.6rem;
   color: var(--color-gray-500);
   background-color: transparent;
-  border: 2px solid #2d2f31;
+  border: 1px solid #2d2f31;
   position: relative;
   align-items: center;
   width: 110px;
@@ -1341,6 +1362,8 @@ background-color: white;
   white-space: nowrap;
 }
 
+
+
 .btnfilter :hover {
   background-color: lightgray;
 }
@@ -1354,12 +1377,14 @@ background-color: white;
     font-size: 1rem;
     color: var(--color-gray-500);
     background-color: transparent;
-    border: 2px solid #2d2f31;
+    border: 1px solid #2d2f31;
     position: relative;
     align-items: center;
 width: 100px;
 height: 60px;
+
      }
+
 }
 
 
@@ -1368,20 +1393,21 @@ height: 60px;
   background-color: lightgray;
 }
 
+
 .filter-form {
   width: 230px;
   height: 90px;
   margin-left: 2px;
-  border: 2px solid #2d2f31;
+  border: 1px solid #2d2f31;
   position: relative;
 }
 
 @media screen and (max-width: 425px) {
   .filter-form{
     position: relative;
-width: 240px;
+width: 260px;
 height: 60px;
-
+left: 10px;
   }
 }
 
@@ -1432,7 +1458,7 @@ height: 60px;
   right: 3.2rem;
   border: 1px solid transparent;
   pointer-events: none;
-  transition: transform 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: transf    margin-bottom: 2.4rem;orm 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
   transform: translateY(1.2rem);
 }
 
@@ -1463,7 +1489,10 @@ margin-top: -20px;
 justify-content: flex-end;
   margin-top: -100px;
 }
-
+.panel {
+  position: relative;
+  margin-top: 60px;
+}
 
 @media screen and (max-width: 425px) {
 .results{
@@ -1474,28 +1503,23 @@ justify-content: flex-end;
 @media screen and (max-width: 425px) {
 .results-show{
   display: block;
-  margin-left:-100px;
   position: absolute;
-  margin-top: -125px;
+  left: 90px;
+  margin-top: -140px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
   0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   background-color: white;
   z-index: 1000;
-  width:320px ;
-height: 200px;
-  padding-right: 150px;
+  width: 320px;
+height: 100px;
+  padding: 10px;
 }
+.panel{
+  margin-top: 0;
 }
-.panel {
-  position: relative;
-  margin-top: 60px;
 }
 
-@media screen and (max-width: 425px) {
-  .panel{
-    margin-left: -250px;
-  }
-}
+
 
 
 .filterpanel {
@@ -1508,6 +1532,18 @@ height: 200px;
   transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
   width: 100%;
 }
+
+@media screen and (max-width: 425px) {
+  .panel{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .filterpanel{
+  
+   margin-top: 0;
+  }
+}
+
 .filterpanel-sidebar {
  
   grid-column: 1/4;
@@ -1527,11 +1563,13 @@ height: 200px;
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     background-color: white;
     z-index: 1000;
-    margin-top: -150px;
-    grid-column: 1/4;
+    margin-top: -100px;
+    grid-column: 1/1;
     max-height: 250rem;
     transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
-    margin-left: 150px;
+ padding-left: 20px;
+ padding-right: 5px;
+ left: 80px;
     width: 320px;
     position: absolute;
   }
@@ -1706,15 +1744,15 @@ label {
 
 @media screen and (max-width: 425px) {
   .course-list{
-    margin-left: -155px;
-  }
+    margin-left: -80px;
+    grid-column: 4/-1;
 
 }
 .course-list-container{
   margin-bottom: 3.2rem;
   position: relative;
 }
-
+}
 @media screen and (max-width: 425px) {
   .course-list-container{
     margin-bottom: 4.2rem;
@@ -1732,8 +1770,8 @@ label {
 @media screen and (max-width: 425px) {
   
   .course-card-img-container img {
-    width: 66px;
-    height: 66px;
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -1744,7 +1782,7 @@ label {
   border-bottom: 1px solid #d1d7dc;
 }
 .course-card {
-
+  margin-top: 20px;
   display: grid;
   position: relative;
   grid-template-columns: auto 1fr;
@@ -1774,18 +1812,10 @@ label {
 @media screen and (max-width: 425px) {
 
   .course-card-main-content {
-    margin-left: -20px;
+    margin-left: -15px;
   }
 }
 
-.course-card-main-content h3{
-  font-family: var(--font-stack-heading);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0;
-  font-size: 1rem;
-
-}
 
 
 @media screen and (max-width: 425px) {
@@ -1796,7 +1826,7 @@ label {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     flex-wrap: wrap;
   }
 }
@@ -1806,7 +1836,7 @@ label {
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
-  font-size: 1.6rem;
+  font-size: 1.rem;
   text-decoration: none;
   color: black;
 }
@@ -1823,18 +1853,30 @@ label {
     white-space: normal;
 }
  
-@media screen and (max-width: 425px) {
-.course-card-main-content h4{
-  display: none;
 
-}
-}
 .course-card-instructor {
   font-family: var(--font-stack-text);
   font-weight: 400;
   line-height: 1.2;
   font-size: 1rem;
 }
+
+@media screen and (max-width: 425px) {
+  .course-card-main-content h4{
+    display: none;
+  
+  }
+
+  .course-card-instructor {
+    font-family: var(--font-stack-text);
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 0.9rem;
+  }
+  
+  }
+
+
 .starrating .point {
   font-family: var(--font-stack-heading);
   font-weight: 700;
@@ -1889,9 +1931,22 @@ label {
   text-align: right;
 }
 
+
+@media screen and (max-width: 425px) {
+  .prices{
+    position: relative;
+    top: 0;
+    right: 0px;
+  
+    text-align: left;
+
+  }
+}
+
+
 .first{
 
-  font-family: var(--font-stack-heading); console.log(123);
+  font-family: var(--font-stack-heading);
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0;
@@ -1913,6 +1968,94 @@ label {
   text-decoration: line-through;
 
 }
+
+@media screen and (max-width: 425px) {
+  .prices{
+    position: relative;
+    top: 0;
+    right: 0px;
+  display: inline-flex;
+    
+
+  }
+
+
+  .first{
+
+    font-family: var(--font-stack-heading);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      font-size: 1.2rem;
+    position: relative;
+   top: 15px;
+  
+  }
+
+  .second{
+
+    font-family: var(--font-stack-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: 1rem;
+margin-top:18px;
+    color: #6a6f73;
+    text-decoration: line-through;
+  padding-left: 10px;
+  }
+
+  .starrating .point {
+    font-family: var(--font-stack-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
+  
+  .starrating .numbers {
+    font-family: var(--font-stack-text);
+    font-weight: 200;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    color: #6a6f73;
+    margin-left: 0.2rem;
+  }
+  
+  .starrating img {
+    margin-left: 0.4rem;
+  }
+  
+  .levels {
+    font-family: var(--font-stack-text);
+    font-weight: 200;
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+  
+  .highest {
+    margin-top: 5px;
+    font-family: var(--font-stack-text);
+    font-weight: 400;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+  
+    white-space: nowrap;
+    background-color: var(--ribbon-background-color);
+    color: var(--ribbon-color);
+  }
+
+
+
+
+}
+
+
+
+
+
 
 .popup{
   display: none;
@@ -1970,11 +2113,11 @@ padding: 10px;
 
 @media screen and (max-width: 425px) {
 .popup-show{
-  margin-left: 10px;
+  margin-left: -50px;
   height: 300px;
-  width: 400px;
+  width: 350px;
   background-color: white;
-
+display: block;
   margin-top: 5px;
   margin-bottom: 150px;
   z-index: 1000;
@@ -2062,7 +2205,7 @@ width: inherit;
       letter-spacing: 0;
       font-size: 1.2rem;
      
-    margin-left: 60px;
+    margin-left: 0px;
   }
   
   .related-searches i{
@@ -2071,7 +2214,7 @@ width: inherit;
   }
   
   .relatedlist{
-    margin-left: 60px;
+    margin-left: 0px;
   
   width: 420px;
    
