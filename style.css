@@ -553,10 +553,11 @@ background-color: white;
 .fa-angle-right {
   
   color: grey;
-display: inline-flex;
-padding: 10px;
-margin-left: 200px;
-  
+display: flex;
+flex-grow: 1;
+padding-left: 200px;
+
+ 
 }
 
 .straightline {
