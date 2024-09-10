@@ -1,15 +1,17 @@
+let data = [];
 const courseList = document.querySelector(".course-list");
+// console.log(courseList);
 const highest = document.querySelector(".highest");
 getCourses();
 async function getCourses() {
   const res = await fetch("./details.json");
-  const data = await res.json();
-  console.log(data);
+  data = await res.json();
+  // console.log(data);
   showCourses(data);
 }
 
 function showCourses(courses) {
-  console.log(courses);
+  // console.log(courses);
   courseList.innerHTML = " ";
   courses.forEach((course) => {
     const {
@@ -63,12 +65,7 @@ function showCourses(courses) {
 
    </div>
   
-  
-
-
-
-    
-                 <div class="prices">
+  <div class="prices">
       <div class="first">${firstprice}</div>
         <div class="second">${secondprice}</div>
       </div>
@@ -94,24 +91,29 @@ function showCourses(courses) {
     `;
 
     courseList.appendChild(courseEl);
-  });
-  const coursecontent = document.querySelectorAll(".course-card-main-content");
 
-  coursecontent.forEach((element) => {
-    const popup = element.querySelector(".popup");
+    // let Ratings = ["4.5", "4.0", "3.5", "3.0"];
 
-    element.addEventListener("mouseover", () => {
-      popup.classList.add("popup-show");
-    });
+    const coursecontent = document.querySelectorAll(
+      ".course-card-main-content"
+    );
 
-    element.addEventListener("mouseout", () => {
-      popup.classList.remove("popup-show");
-    });
-    popup.addEventListener("mouseover", () => {
-      popup.classList.add("popup-show");
-    });
-    popup.addEventListener("mouseout", () => {
-      popup.classList.remove("popup-show");
+    coursecontent.forEach((element) => {
+      const popup = element.querySelector(".popup");
+
+      element.addEventListener("mouseover", () => {
+        popup.classList.add("popup-show");
+      });
+
+      element.addEventListener("mouseout", () => {
+        popup.classList.remove("popup-show");
+      });
+      popup.addEventListener("mouseover", () => {
+        popup.classList.add("popup-show");
+      });
+      popup.addEventListener("mouseout", () => {
+        popup.classList.remove("popup-show");
+      });
     });
   });
 }
@@ -277,11 +279,11 @@ toggleUdnameAS.addEventListener("mouseout", () => {
 /////////////////////////////////////////////////////////////////////
 
 const upArrow = document.querySelector(".uparrow1");
-console.log(upArrow);
+// console.log(upArrow);
 const contentwrapper = document.querySelector(".panel-module-content-wrapper");
 
 upArrow.addEventListener("click", () => {
-  console.log("123");
+  // console.log("123");
 
   {
     contentwrapper.classList.contains("panel-module-content-wrapper-hidden")
@@ -299,7 +301,7 @@ panelmodule.forEach((module, index) => {
   const languagecontent = module.querySelector(".language-content");
   // console.log(languagecontent);
   uparrowall.addEventListener("click", () => {
-    console.log(index);
+    // console.log(index);
     {
       languagecontent.classList.contains("language-content-hidden")
         ? languagecontent.classList.remove("language-content-hidden") &&
@@ -314,7 +316,7 @@ const btnbar = document.querySelector(".btn-bar");
 const mobilename = document.querySelector(".mobile-name1");
 
 const closebutton = document.querySelector(".close-btn");
-console.log(closebutton);
+// console.log(closebutton);
 
 http: btnbar.addEventListener("click", () => {
   mobilename.classList.add("mobile-name1-show");
@@ -370,7 +372,7 @@ closebuttonmobile2.addEventListener("click", () => {
 
 // });
 btnheader = document.querySelector(".btn");
-console.log(btnheader);
+// console.log(btnheader);
 barheader = document.querySelector(".btn-bar");
 btnheaderimg = document.querySelector(".ud-img");
 cartlistheader = document.querySelector(".udcartlistm");
@@ -379,7 +381,7 @@ searchcontainer = document.querySelector(".searchcontainer");
 
 searchclose = document.querySelector(".searchclose");
 btnheader.addEventListener("click", () => {
-  console.log(123);
+  // console.log(123);
   barheader.classList.add("btn-bar-hidden");
   btnheaderimg.classList.add("ud-img-hidden");
   cartlistheader.classList.add("udcartlistm-hidden");
@@ -395,3 +397,166 @@ searchclose.addEventListener("click", () => {
   searchfor.classList.remove("searchfor-show");
   searchcontainer.classList.remove("searchcontainer-show");
 });
+
+ratingradio = document.querySelectorAll(".ulradio li #a");
+
+console.log(ratingradio);
+ratingradio.forEach((r) => {
+  console.log(r);
+  // atext = r.("label#a_text");
+  // console.log(data);
+
+  r.addEventListener("change", () => filterData(r.value));
+});
+
+function filterData(altText) {
+  courseList.innerHTML = "";
+  console.log(altText);
+  data.forEach((d) => {
+    if (Number(d.Rating[0]) >= Number(altText)) {
+      const courseEl = document.createElement("div");
+      courseEl.classList.add("course");
+
+      courseEl.innerHTML = `
+      
+  <div class="course-list-container">
+
+   
+    <div class="course-module">
+      <div class="course-card">
+        <div class="course-card-img-container">
+          <img src="${d.Image}"/>
+ </div>
+
+        <div class="course-card-main-content">
+          <a href="${d.courseLink}">
+            <h3>${d.CourseName}</h3>
+          </a>
+          <h4>
+           ${d.Description}
+          </h4>
+          <div class="course-card-instructor">
+            The <strong>Net</strong>
+            <strong>Ninja</strong> (Shaun pelling)
+          </div>
+          <div class="starrating">
+            <span class="point">${d.Rating[0]}</span>
+            <img src="${d.Rating[1]}" />
+            <span class="numbers">${d.Rating[2]}</span>
+            <div class="levels">
+              ${d.Duration}
+            </div>
+            <span class="highest">${d.scores}</span>
+
+</div>
+
+<div class="prices">
+<div class="first">${d.firstprice}</div>
+  <div class="second">${d.secondprice}</div>
+</div>
+
+<div class="popup">
+
+<div class="popup-heading"><h2>What you'll learn</h2></div>
+
+<p class="one">${d.popups[0]}</p>
+<p class="two">${d.popups[1]}</p>
+<p class="three">${d.popups[2]}</p>
+<div class="addto-Cart"><h2>Add to Cart</h2></div>
+<div class="circle"></div>
+<i class="fa fas-heart"></i>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+`;
+      courseList.appendChild(courseEl);
+    }
+  });
+}
+// optionfilter = document.querySelector(".optionfilter .select-form");
+selectform = document.querySelector(".select-form");
+
+console.log(selectform.value);
+
+selectform.addEventListener("click", () => {
+  filteroptions(4.5);
+});
+function filteroptions(optionfilter) {
+  courseList.innerHTML = "";
+
+  data.forEach((d) => {
+    if (Number(d.Rating[0]) >= Number(optionfilter)) {
+      const courseEl = document.createElement("div");
+      courseEl.classList.add("course");
+
+      courseEl.innerHTML = `
+      
+  <div class="course-list-container">
+
+   
+    <div class="course-module">
+      <div class="course-card">
+        <div class="course-card-img-container">
+          <img src="${d.Image}"/>
+ </div>
+
+        <div class="course-card-main-content">
+          <a href="${d.courseLink}">
+            <h3>${d.CourseName}</h3>
+          </a>
+          <h4>
+           ${d.Description}
+          </h4>
+          <div class="course-card-instructor">
+            The <strong>Net</strong>
+            <strong>Ninja</strong> (Shaun pelling)
+          </div>
+          <div class="starrating">
+            <span class="point">${d.Rating[0]}</span>
+            <img src="${d.Rating[1]}" />
+            <span class="numbers">${d.Rating[2]}</span>
+            <div class="levels">
+              ${d.Duration}
+            </div>
+            <span class="highest">${d.scores}</span>
+
+</div>
+
+<div class="prices">
+<div class="first">${d.firstprice}</div>
+  <div class="second">${d.secondprice}</div>
+</div>
+
+<div class="popup">
+
+<div class="popup-heading"><h2>What you'll learn</h2></div>
+
+<p class="one">${d.popups[0]}</p>
+<p class="two">${d.popups[1]}</p>
+<p class="three">${d.popups[2]}</p>
+<div class="addto-Cart"><h2>Add to Cart</h2></div>
+<div class="circle"></div>
+<i class="fa fas-heart"></i>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+`;
+      courseList.appendChild(courseEl);
+    }
+  });
+}
+// function selectoptions() {
+//   optionfilter[2].addEventListener("click", () => {
+//     console.log(123);
+//   });
+// }
