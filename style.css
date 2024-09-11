@@ -1514,17 +1514,17 @@ justify-content: flex-end;
   overflow: hidden;
   display:block;
   position: absolute;
-  right: 0;
-  padding: 10px;
-  margin-top: -140px;
+
+left: 45%;
+  margin-top: -150px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
   0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
   background-color: white;
   z-index: 1030;
   font-size: 1rem;
-height: 40px;
-max-width: 78%;
-  width: 280px;
+height: 50px;
+
+width: 210px;
   
 }
 .panel{
@@ -1572,20 +1572,16 @@ max-width: 78%;
   }
 
   .filterpanel-sidebar-show {
-    display: block;
+  overflow: hidden;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 8%),
     0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     background-color: white;
     z-index: 1030;
     margin-top: -100px;
-    grid-column: 1/16;
-    
-    transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
- padding-left: 20px;
-
-right: -10px;
-
-overflow: hidden;
+    grid-column: 1/4;
+    width: 220px;
+display: block;
+left: 230%;
     position: absolute;
 
 
@@ -1762,6 +1758,54 @@ label {
   min-width: 1px;
 }
 
+@media screen and (max-width: 425px) {
+
+.rating-content .answer {
+  color: transparent;
+  border: 0.2rem solid black;
+  margin-right: 0.8rem 0;
+  position: relative;
+  top: 0.2rem;
+  width: .8rem;
+  height: .8rem;
+  font-size: 0.5rem;
+}
+
+.language-content .answer {
+  
+  margin-right: 0.8rem rem;
+  position: relative;
+  top: 0.2rem;
+  width: .8rem;
+  height: .8rem;
+  
+
+}
+.rating-content label {
+  margin-left: 2px;
+  font-size: .8rem;
+}
+
+
+.language-content label {
+  margin-left: 2px;
+  font-size: .8rem;
+}
+.uparrow{
+padding-right: 30px;
+}
+.uparrow1{
+  padding-right: 30px;
+  }
+  .panel-module1{
+    padding-left: 4px;
+
+  }
+  .panel-module{
+    padding-left: 4px;
+
+  }
+}
 @media screen and (max-width: 425px) {
   .course-list{
     margin-left: -80px;
