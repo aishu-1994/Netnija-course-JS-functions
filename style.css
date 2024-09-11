@@ -806,7 +806,7 @@ margin-top: -55px;
   position: relative;
 }
 .toggle-Udbusiness-active {
-  background-color: white;menubar.classList.add("mobile-menu-show");
+  background-color: white;
   position: absolute;
   border-style: solid 5px grey;
   z-index: 1000;
@@ -1467,7 +1467,8 @@ left: 10px;
   right: 3.2rem;
   border: 1px solid transparent;
   pointer-events: none;
-  transition: transf    margin-bottom: 2.4rem;orm 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  margin-bottom: 2.4rem;
+  transition: transform 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
   transform: translateY(1.2rem);
 }
 
