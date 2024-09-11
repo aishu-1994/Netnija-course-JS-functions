@@ -1563,7 +1563,7 @@ width: 210px;
  
   grid-column: 1/4;
   max-height: 240rem;
-  transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
+ 
 }
 
 @media screen and (max-width: 425px) {
@@ -1672,18 +1672,18 @@ display: none;
   font-weight: 400;
   line-height: 1.2;
   font-size: 1.2rem;
-  border-radius: 50%;
+ 
   display: inline-block;
-  flex-shrink: 0;
+  
   cursor: pointer;
 }
 .rating-content li {
   margin-top: 12px;
 }
 input {
-  border-radius: 50%;
+ 
   display: inline-block;
-  flex-shrink: 0;
+  
   cursor: pointer;
 }
 label {
@@ -1717,9 +1717,7 @@ label {
   
 
 }
-.language-content input{
-  border:50px solid black;
-}
+
 .language-content label {
   margin-left: 5px;
   font-size: 1rem;
@@ -1773,7 +1771,7 @@ label {
 }
 
 .language-content .answer {
-  
+  font-size: 0.5rem;
   margin-right: 0.8rem rem;
   position: relative;
   top: 0.2rem;
